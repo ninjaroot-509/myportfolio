@@ -1,0 +1,26 @@
+{% load static %}
+
+<div class="site-section" id="portfolio-section">
+<div class="container">
+    <div class="row mb-5 ">
+    <div class="col-md-7 section-title text-center mx-auto">
+        <span class="sub-title mb-2 d-block">Recent Works</span>
+        <h2 class="title text-primary mb-3">I love what i do, check out some of my latest works</h2>
+    </div>
+    </div>
+    
+    {% for work in works %}
+    <div class="row mb-5">
+    <div class="col-lg-6 order-1 order-lg-2 mb-4 mb-lg-0">
+        <img src="{{work.image.url}}" alt="Image" class="img-fluid">
+    </div>
+    <div class="col-lg-5 h-100 jm-sticky-top mr-auto order-2 order-lg-1">
+        <h3>{{work.title}}</h3>
+        <p class="mb-4">{{work.body}}</p>
+        <p class="mb-4"><a href="{{work.link}}" class="readmore">Visit website</a></p>
+    </div>
+    </div>
+    {% endfor %}
+
+</div>
+</div>

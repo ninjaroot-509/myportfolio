@@ -1,0 +1,50 @@
+    {% extends 'portfolio/base.html' %}
+    {% block titled %}NinjarootDev &mdash; Portfolio{% endblock titled %}
+    {% load static %}
+
+    {% block content %}
+
+    
+    <div class="site-blocks-cover" id="home-section">
+      <div class="img-wrap">
+        <div class="owl-carousel slide-one-item hero-slider">
+          <div class="slide">
+            <img src="images/glint_hero_1.jpg" alt="Image">  
+          </div>
+          <div class="slide">
+            <img src="images/glint_hero_2.jpg" alt="Image">  
+          </div>
+          <div class="slide">
+            <img src="images/glint_hero_3.jpg" alt="Image">  
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 ml-auto align-self-center">
+            <div class="intro">
+              <div class="heading">
+                <h1 style="color: blue">Ninja<span style="color: red">Root</span></h1>
+              </div>
+              <div class="text">
+                <p class="sub-text mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde modi blanditiis iure.</p>
+                <p><a href="#" target="_blank" class="btn btn-outline-primary btn-md">See my <b>Github projects</b></a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- END .site-blocks-cover -->
+    
+{% include "portfolio/progs.html"%} 
+{% include "portfolio/about.html"%} 
+{% include "portfolio/dcoder.html"%} 
+{% include "portfolio/works.html"%} 
+{% include "portfolio/gallery.html"%} 
+{% include "portfolio/contact.html"%} 
+
+  
+
+
+
+   {% endblock %}

@@ -1,0 +1,37 @@
+{% load static %}
+
+{% for dcoder in decoders %}
+<div class="site-section" id="what-we-do-section">
+<div class="container">
+    <div class="row mb-5">
+    <div class="col-lg-6 section-title">
+        <span class="sub-title mb-2 d-block">Meet my Team</span>
+        <h2 class="title text-primary">We are talented people.</h2>
+    </div>
+    </div>
+    <div class="row no-gutters">
+    <div class="col-lg-12 person">
+        <img src="{{dcoder.logo.url}}" alt="Image" class="img-fluid mb-5" style="width: 100%">
+        <div class="row">
+        <div class="col-lg-10 ml-auto">
+            <div class="pr-lg-5">
+            <h3>{{dcoder.name}}</h3>
+            <span class="mb-4 d-block">{{dcoder.local}}</span>
+            <p>{{dcoder.body}}</p>
+            <p class="d-flex align-items-center">
+                <span class="mr-3 text-black">Follow us:</span>
+                <a href="{{dcoder.whatsapp}}" class="whatsapp p-2"><span class="icon-whatsapp" style="color: green"></span></a>
+                <a href="{{dcoder.facebook}}" class="facebook p-2"><span class="icon-facebook"></span></a>
+                <a href="{{dcoder.twitter}}" class="twitter pr-2 pt-2 pb-2 pl-0"><span class="icon-twitter"></span></a>
+                <a href="{{dcoder.instagram}}" class="instagram p-2"><span class="icon-instagram"></span></a>
+                <a href="{{dcoder.linkedin}}" class="linkedin p-2"><span class="icon-linkedin"></span></a>
+                <a href="{{dcoder.github}}" class="github p-2"><span class="icon-github"></span></a>
+            </p>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
+</div>
+{% endfor %}

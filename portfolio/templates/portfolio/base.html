@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+{% include "portfolio/header.html" %}
+
+<title>{% block titled %}{% endblock titled %}</title>
+{% block extra_head %} {% endblock %}
+
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+{% include "portfolio/nav.html"%}
+{% if messages %} 
+<div class="mt-0" style="height: 200px;">
+{% for message in messages %}
+<div
+    class="alert alert-{{ message.tags }} alert-dismissible fade show"
+    role="alert"
+>
+    {{ message }}
+
+    <button
+    type="button"
+    class="close"
+    data-dismiss="alert"
+        aria-label="Close"
+        >
+    <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+        {% endfor %} 
+    </div>
+    {% endif %} 
+
+
+    {% block content %} 
+    {% endblock content %}
+
+    {% block extra_body %} 
+    {% endblock %} 
+
+    {% include "portfolio/footer.html"%} 
+    {% include "portfolio/script.html"%}
+
+    {% block extra_scripts %}
+    {% endblock extra_scripts %}
+</body>
+</html>
